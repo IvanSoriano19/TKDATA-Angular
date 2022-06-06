@@ -16,9 +16,9 @@ createWindow = () => {
 
     appWin.loadURL(`file://${__dirname}/dist/index.html`);
 
-    appWin.setMenu();
+    appWin.setMenu(null);
 
-    //appWin.webContents.openDevTools();
+    appWin.webContents.openDevTools();
 
     appWin.on("closed", () => {
         appWin = null;

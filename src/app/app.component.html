@@ -3,17 +3,20 @@
   <div class="card text-center">
 
     <div class="card-header">
-    <b>LOGIN</b>  
+      <b>LOGIN</b>
     </div>
 
     <div class="card-body p-4">
-      <label>Email</label>
-     <input class="form-control" type="email" placeholder="Ingrese su email">
-      <label>Contraseña</label>
-     <input class="form-control" type="password" placeholder="Ingrese su contraseña">
-      <button class="btn btn-primary btn-block">LOGIN</button>
-    </div>
-fa
-  </div>
+      <label class="">Email</label>
+      <input class="form-control m-2" type="email" placeholder="Ingrese su email" [(ngModel)]="usuario.email">
 
+      <label>Contraseña</label>
+      <input class="form-control m-2" type="password" placeholder="Ingrese su contraseña" [(ngModel)]="usuario.password">
+        <button class="btn btn-primary w-100 m-2" (click)="Login()">LOGIN</button>
+        <!-- <button class="btn btn-secondary w-100 m-2" (click)="LoginGoogle()">LOGIN CON GOOGLE</button> -->
+      <br>
+      <label>Aun no has registrado tu club? <a href="#">Registralo ya!</a></label>
+    </div>
+
+  </div>
 </div>
