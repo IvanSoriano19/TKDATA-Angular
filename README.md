@@ -1,6 +1,18 @@
 # TKDATA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Proyecto de trabajo de final de grado de desarrollo de aplicaciones multiplataforma
+
+# Tecnologías
+
+* **Angular**
+* **Bootstrap**
+* **TypeScript**
+* **Firebase como base de datos**
+
+# Editores de código
+
+* **Visual Studio Code**
+* **Vim**
 
 ## Running in electron
 
@@ -14,4 +26,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Para instalar las dependencias haz `npm install`
 
+## Control De Versiones 
 
+* **Git y GitHub**
+
+## Autor
+
+* **Ivan Soriano** 
