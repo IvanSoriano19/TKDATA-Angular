@@ -4,7 +4,7 @@ let appWin;
 
 createWindow = () => {
     appWin = new BrowserWindow({
-        width: 1000,
+        width: 1500,
         height: 800,
         title: "Angular and Electron",
         resizable: false,
@@ -29,6 +29,6 @@ app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
-      app.quit();
+        app.quit();
     }
 });

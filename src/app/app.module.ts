@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AuthService } from './auth/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,12 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     NgbModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AppRoutingModule
+    AngularFireAuthModule,
+    AppRoutingModule,
+    ReactiveFormsModule
+    
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

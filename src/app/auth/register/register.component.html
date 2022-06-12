@@ -5,24 +5,27 @@
         <div class="card-header">
             <b>Registro</b>
         </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <div class="card-body p-4">
+                <label class="">Nombre del club</label>
+                <input formControlName="nombre" class="form-control m-2" type="Text" placeholder="Ingrese el nombre del club">
 
-        <div class="card-body p-4">
-            <label class="">Nombre del club</label>
-            <input class="form-control m-2" type="Text" placeholder="Ingrese el nombre del club">
+                <label class="">Email</label>
+                <input formControlName="email" class="form-control m-2" type="email" placeholder="Ingrese su email">
 
-            <label class="">Email</label>
-            <input class="form-control m-2" type="email" placeholder="Ingrese su email">
+                <label>Contraseña</label>
+                <input formControlName="password" class="form-control m-2" type="password" placeholder="Ingrese su contraseña">
 
-            <label>Contraseña</label>
-            <input class="form-control m-2" type="password" placeholder="Ingrese su contraseña">
+                <label>Repita la contraseña</label>
+                <input formControlName="repeat_password" class="form-control m-2" type="password" placeholder="Repita la contraseña">
+                
+                <!-- <p class="alert alert-danger" *ngIf="(registerForm.get('repeat_password') != registerForm.get('password'))">
+                    La contraseña no coincide
+                </p> -->
 
-            <label>Repita la contraseña</label>
-            <input class="form-control m-2" type="password" placeholder="Repita la contraseña">
-
-            <button class="btn btn-primary w-100 m-2">Registrar</button>
-
-            <label>Ya tienes una cuenta? <a [routerLink]="['/login']">Login</a></label>
-        </div>
-
+                <button type="submit" class="btn btn-primary w-100 m-2">Registrar</button>
+                <label>Ya tienes una cuenta? <a [routerLink]="['/login']">Login</a></label>
+            </div>
+        </form>
     </div>
 </div>
