@@ -2,14 +2,14 @@
 
 Proyecto de trabajo de final de grado de desarrollo de aplicaciones multiplataforma
 
-# Tecnologías
+## Tecnologías
 
 * **Angular**
 * **Bootstrap**
 * **TypeScript**
 * **Firebase como base de datos**
 
-# Editores de código
+## Editores de código
 
 * **Visual Studio Code**
 * **Vim**
