@@ -8,18 +8,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item active m-2">
                 <a class="nav-link" [routerLink]="['/']">Home</a>
             </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item active">
+
+            <li class="nav-item" *ngIf="isLogged">
+                <a class="nav-link">{{usuario.email}}</a>
+            </li>
+            
+            <li class="nav-item active" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/login']">Login</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link">Logout</a>
+            <li class="nav-item active" *ngIf="isLogged">
+                <a class="nav-link" [routerLink]="['/login']"
+                    (click)="logOut()">Logout</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/register']">Register</a>
             </li>
         </ul>

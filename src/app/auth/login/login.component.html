@@ -5,20 +5,21 @@
     <div class="card-header">
       <b>LOGIN</b>
     </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="card-body p-4">
+        <label class="">Email</label>
+        <input formControlName="email" class="form-control m-2" type="email">
 
-    <div class="card-body p-4">
-      <label class="">Email</label>
-      <input class="form-control m-2" type="email" placeholder="Ingrese su email">
+        <label>Contraseña</label>
+        <input formControlName="password" class="form-control m-2" type="password">
 
-      <label>Contraseña</label>
-      <input class="form-control m-2" type="password" placeholder="Ingrese su contraseña">
-      
-      <button class="btn btn-primary w-100 m-2">LOGIN</button>
-      <!-- <button class="btn btn-secondary w-100 m-2" (click)="LoginGoogle()">LOGIN CON GOOGLE</button> -->
-      <br>
-      <label>Aun no has registrado tu club? <a [routerLink]="['/register']">Registralo
-          ya!</a></label>
-    </div>
+        <button type="submit" class="btn btn-primary w-100 m-2">LOGIN</button>
+        <!-- <button class="btn btn-secondary w-100 m-2" (click)="LoginGoogle()">LOGIN CON GOOGLE</button> -->
+        <br>
+        <label>Aun no has registrado tu club? <a [routerLink]="['/register']">Registralo
+            ya!</a></label>
+      </div>
+    </form>
 
   </div>
 </div>

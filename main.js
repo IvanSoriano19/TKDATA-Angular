@@ -6,7 +6,7 @@ createWindow = () => {
     appWin = new BrowserWindow({
         width: 1500,
         height: 800,
-        title: "Angular and Electron",
+        title: "TKDATA",
         resizable: false,
         webPreferences: {
             contextIsolation: false,

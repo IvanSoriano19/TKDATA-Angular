@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { User } from '@firebase/auth';
+import { signInWithEmailAndPassword, User } from '@firebase/auth';
 import { Auth } from '@firebase/auth';
+import { map } from 'rxjs';
+import { getAuth, onAuthStateChanged } from '@firebase/auth';
 
 @Injectable()
 
@@ -22,6 +24,12 @@ export class AuthService {
 
   logout(){
     return this.afAuth.signOut();
+  }
+
+  authenticated(){
+    return this.afAuth.authState.pipe(
+      map(user => user != null)
+    );
   }
 
   getCurrentUser(){
